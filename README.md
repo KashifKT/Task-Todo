@@ -81,7 +81,7 @@ lib/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/task-todo-mvc-firebase-http.git
+git clone https://github.com/KashifKT/task-todo-mvc-firebase-http.git
 ```
 
 ### 2. Navigate Project
