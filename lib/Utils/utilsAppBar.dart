@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:todo_app/Screens/Form%20Pages/loginform.dart';
-import '../Drawer/cusDrawer.dart';
+import 'package:todo_app/Views/Drawer/cusDrawer.dart';
+
 //  for Login and Sign Up
 AppBar formAppBar({required Widget title }){
   return AppBar(
@@ -22,47 +22,66 @@ AppBar formAppBar({required Widget title }){
 
 // for MyHomepage
 
-AppBar appBarCus(BuildContext context, Widget title){
+// lib/Views/Shared/appbar_custom.dart
+// adjust to where your iconLogoutBtn exists
+
+
+AppBar appBarCus({
+  required BuildContext context,
+  required bool isSearching,
+  required TextEditingController searchController,
+  required VoidCallback onFilterPressed,
+  required VoidCallback onSearchPressed,
+  required VoidCallback onClearSearch,
+}) {
   return AppBar(
+    title: isSearching
+        ? TextField(
+
+      controller: searchController,
+      autofocus: true,
+      style: const TextStyle(color: Colors.white),
+      decoration: InputDecoration(
+        hintText: "Search by title...",
+        hintStyle: const TextStyle(color: Colors.white70),
+        border: InputBorder.none,
+        suffixIcon: IconButton(
+          icon: const Icon(Icons.clear, color: Colors.white),
+          onPressed: onClearSearch,
+        ),
+      ),
+      onChanged: (_) => onSearchPressed(),
+    )
+        : Text("My Tasks"),
     leading: IconButton(
         onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>cusDrawer(context)));
-        },
+
+          cusDrawer(context);
+        }, 
         icon: Icon(Icons.menu)),
-    title: title,
-    automaticallyImplyLeading: true,
     foregroundColor: Colors.white,
     backgroundColor: Colors.deepOrange,
     shadowColor: Colors.black,
     centerTitle: true,
+
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(20),
-          bottomRight: Radius.circular(20)),
+        bottomLeft: Radius.circular(20),
+        bottomRight: Radius.circular(20),
+      ),
     ),
-    //leadingWidth: ,
-    //bottomOpacity: ,
-    //toolbarHeight:  double.infinity,
+
     actions: [
       IconButton(
         icon: const Icon(Icons.search),
-        onPressed: (){
-          //Tap on SearchBtn
-        },
+        onPressed: onSearchPressed,
       ),
       IconButton(
-        icon: const Icon(Icons.logout),
-        onPressed: (){
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginUI()),);
-
-        },
+        icon: const Icon(Icons.filter_alt),
+        onPressed: onFilterPressed,
       ),
     ],
 
-
-
     elevation: 10,
-
   );
 }
-

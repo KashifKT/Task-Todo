@@ -1,7 +1,10 @@
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:todo_app/Screens/myhompage.dart';
+
+import '../Views/HomePage/myhompage.dart';
+
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -53,3 +56,6 @@ class AuthService {
     }
   }
 }
+
+
+
