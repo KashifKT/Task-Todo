@@ -4,10 +4,33 @@ A production-ready Task Todo application built with Flutter using MVC architectu
 
 ---
 
+<p align="center">
+  
+  <img src="https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Get_x%20Management-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/MVC-Architecture-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/HTTP-API%20Client-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS-lightgrey?style=for-the-badge" />
+
+</p>
+
+---
+
+## 📥 Download App
+
+<p align="center">
+  <a href="https://github.com/KashifKT/Task-Todo/releases/download/v1.0/app-release.apk">
+    <img src="https://img.shields.io/badge/⬇️%20Download%20APK-Click%20Here-success?style=for-the-badge&logo=android&logoColor=white"/>
+  </a>
+</p>
+
+---
+
 ## 🚀 Features
 
 - 🔐 Firebase Authentication (Login / Register / Logout)
 - 📝 Create, Update, Delete Tasks
+- 🔄 Get_x State Management 
 - ☁️ Cloud Firestore for real-time database
 - 🔔 Push Notifications using Firebase Cloud Messaging (FCM)
 - 🌐 REST API integration using HTTP package
