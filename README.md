@@ -1,4 +1,4 @@
-<img width="866" height="1298" alt="img_1776960903213" src="https://github.com/user-attachments/assets/410c2d7f-80d1-489b-ade4-8a1af75ec586" /># 📝 Task Todo App (Flutter + MVC + Firebase + FCM + HTTP)
+# 📝 Task Todo App 
 
 A production-ready Task Todo application built with Flutter using MVC architecture. The project integrates Firebase services along with REST API (HTTP) integration and Firebase Cloud Messaging (FCM) for push notifications.
 
